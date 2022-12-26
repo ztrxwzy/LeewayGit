@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class TankFuel : Interactable
 {
 
     public Animator fadeOutIn;
-
+    public TextMeshProUGUI task;
+    public string newTask;
     private bool changeLevel;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,8 @@ public class TankFuel : Interactable
 
         fadeOutIn.SetBool("FadeIn", true);
         Invoke("OnFadeComplete", 2.5f);
-        
+        task.color = Color.green;
+       
 
     }
 
